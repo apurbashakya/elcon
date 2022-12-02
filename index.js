@@ -77,7 +77,6 @@ app.get("/register", (req, res) => {
 app.get("/dashboard", (req, res) => {
   if (req.isAuthenticated()) {
     var user = req.user;
-    console.log(user);
     User.findOne({ username: user.username }, (err, foundUser) => {
       if (err) {
         console.log(err);

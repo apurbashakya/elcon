@@ -1,9 +1,9 @@
-<%- include('partials/header') %>
+<%- include('partials/headerAfterLogin') %>
 
 <div class="jumbotron text-center">
   <div class="container">
-    <h1 class="display-3">Elcon!</h1>
-    <h2 class="secret-text">Hello <%= User.name %></h2>
+    <!-- <h1 class="display-3">Elcon!</h1> -->
+    <!-- <h2 class="secret-text">Hello <%= User.name %></h2> -->
     <hr />
     <div>
       <canvas id="myChart"></canvas>
@@ -35,8 +35,7 @@
         },
       });
     </script>
-    <a class="btn btn-light btn-lg" href="/logout" role="button">Log Out</a>
   </div>
 </div>
 
-<%- include('partials/footer') %>
+<%- include('partials/footerAfterLogin') %>
