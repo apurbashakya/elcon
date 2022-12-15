@@ -9,19 +9,21 @@
       <canvas id="myChart"></canvas>
     </div>
 
+    <%= console.log('') %>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script>
       const ctx = document.getElementById("myChart");
-
+  
       new Chart(ctx, {
         type: "line",
         data: {
-          labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+          labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
           datasets: [
             {
-              label: "# of Votes",
-              data: [12, 19, 3, 5, 2, 3],
+              label: 'Electricity Consumption in KwH',
+              data: JSON.parse("[" + '<%= data[0] %>' + "]"),
               borderWidth: 1,
             },
           ],
@@ -29,7 +31,7 @@
         options: {
           scales: {
             y: {
-              beginAtZero: true,
+              beginAtZero: false,
             },
           },
         },

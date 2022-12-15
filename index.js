@@ -85,7 +85,7 @@ app.get("/dashboard", (req, res) => {
         console.log(err);
       } else {
         if (foundUser) {
-          res.render("dashboard", { User: foundUser });
+          res.render("dashboard", { User: foundUser, data: data});
         }
       }
     });
