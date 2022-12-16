@@ -34,7 +34,7 @@
             >
               <li>
                 <a
-                  class="nav-link px-0 align-middle text-warning"
+                  class="nav-link px-0 align-middle text-light"
                   href="/dashboard"
                   role="button"
                   ><i class="fas fa-tachometer-alt"></i> Weekly</a
@@ -43,7 +43,7 @@
 
               <li>
                 <a
-                  class="nav-link px-0 align-middle text-light"
+                  class="nav-link px-0 align-middle text-warning"
                   href="/month"
                   role="button"
                   ><i class="fas fa-tachometer-alt"></i> Month</a
@@ -87,10 +87,10 @@
         </div>
         <div class="col py-3">
           <% var sum = 0; %>
-          <% for (let i = 0; i < data[0].length; i++) { %>
-          <%     sum += data[0][i]; %>
+          <% for (let i = 0; i < data.length; i++) { %>
+          <%     sum += data[i]; %>
           <% } %>
-          <h3>Next 7 days Electrity forecast  <%= sum.toFixed(2)*2 %> Rupees</h3>
+          <h3>Next 30 days Electrity forecast  <%= sum.toFixed(2)*2 %> Rupees</h3>
 
           <div class="jumbotron text-center">
             <div class="container">
@@ -108,12 +108,12 @@
                   type: "line",
                   data: {
                     labels: [
-                    "1", "2", "3", "4", "5", "6", "7",
+                    "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30",
                     ],
                     datasets: [
                       {
                         label: "Electricity Consumption in KwH",
-                        data: JSON.parse("[" + "<%= data[0] %>" + "]"),
+                        data: JSON.parse("[" + "<%= data %>" + "]"),
                         borderWidth: 1,
                       },
                     ],
