@@ -34,7 +34,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb://localhost:27017/elconDB");
+mongoose.connect("mongodb+srv://elcon:"+process.env.MONGO_PASSWORD+"@elcon.ulbh37o.mongodb.net/?retryWrites=true&w=majority");
 
 const userSchema = new mongoose.Schema({
   username: String,
@@ -155,4 +155,4 @@ app.get("/logout", (req, res) => {
   });
 });
 
-app.listen(3000, () => console.log("Server is running"));
+app.listen(process.env.PORT || 3000, () => console.log("Server is running"));
