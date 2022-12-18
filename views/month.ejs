@@ -37,7 +37,7 @@
                   class="nav-link px-0 align-middle text-light"
                   href="/dashboard"
                   role="button"
-                  ><i class="fas fa-tachometer-alt"></i> Weekly</a
+                  ><i class="fas fa-tachometer-alt"></i> Next 7 days</a
                 >
               </li>
 
@@ -46,25 +46,16 @@
                   class="nav-link px-0 align-middle text-warning"
                   href="/month"
                   role="button"
-                  ><i class="fas fa-tachometer-alt"></i> Month</a
+                  ><i class="fas fa-tachometer-alt"></i> Next 30 days</a
                 >
               </li>
 
               <li>
                 <a
                   class="nav-link px-0 align-middle text-light"
-                  href="/month"
+                  href="/homeAfterLogin"
                   role="button"
-                  ><i class="fas fa-tachometer-alt"></i> Working</a
-                >
-              </li>
-
-              <li>
-                <a
-                  class="nav-link px-0 align-middle text-light"
-                  href="/month"
-                  role="button"
-                  ><i class="fas fa-tachometer-alt"></i> Tips</a
+                  ><i class="fas fa-tachometer-alt"></i> Home</a
                 >
               </li>
 
@@ -90,7 +81,7 @@
           <% for (let i = 0; i < data.length; i++) { %>
           <%     sum += data[i]; %>
           <% } %>
-          <h3>Next 30 days Electrity forecast  <%= sum.toFixed(2)*2 %> Rupees</h3>
+          <h3>Next 30 days Electrity forecast  <%= (sum*6).toFixed(2) %> Rupees</h3>
 
           <div class="jumbotron text-center">
             <div class="container">
