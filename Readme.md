@@ -44,7 +44,7 @@ Jaskaran singh jaggi
 Ujjwal Verma
 Apurba Shakya
 Anurag Garg
-Tanvi
+
 🔗 Links
 Jaskaran Singh Jaggi
 linkedin twitter
@@ -56,9 +56,6 @@ Apurba Shakya
 linkedin twitter
 
 Anurag Garg
-linkedin twitter
-
-Tanvi
 linkedin twitter
 
 Support
